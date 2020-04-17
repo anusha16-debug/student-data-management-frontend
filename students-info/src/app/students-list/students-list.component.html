@@ -1,0 +1,54 @@
+<div class="mainContent">
+        <app-common-header></app-common-header>
+    </div>
+
+        <section class="sectionContent">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-10">
+                      <h2>Students Data List</h2>
+                  </div>
+                  <div class="col-md-2">
+                      <button type="button" class="btn btn-primary createNewBtn" (click)="navigate()">+ Add New</button>
+                  </div>
+                </div>
+
+
+                <div class="row tableContent">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">First Name</th>
+                                      <th scope="col">Last Name</th>
+                                      <th scope="col">Contact No.</th>
+                                      <th scope="col">Address</th>
+                                      <th scope="col">Class</th>
+                                      <th scope="col">Section</th>
+                                      <th scope="col">Grades</th>
+                                      <th scope="col">Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody *ngFor="let item of studentsData; let i=index">
+                                      <td>{{item.first_name}}</td>
+                                      <td>{{item.last_name}}</td>
+                                      <td>{{item.phone}}</td>
+                                      <td>{{item.address}}</td>
+                                      <td>{{item.class}}</td>
+                                      <td>{{item.section}}</td>
+                                      <td>{{item.grades}}</td>
+                                      <td>
+                                          <button type="button" style="margin-right: 7px;" class="btn btn-warning">Update</button>
+                                          <button type="button" class="btn btn-danger">Delete</button>
+                                      </td>
+                                  </tbody>
+                            </table>
+                          </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+
