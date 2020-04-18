@@ -1,5 +1,7 @@
 
-
+.mainContent{
+    overflow-x: hidden;
+}
 .sectionContent{
     padding-top: 50px;
 }

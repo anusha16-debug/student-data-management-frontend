@@ -1,0 +1,39 @@
+.mainContent{
+    overflow-x: hidden;
+}
+
+.sectionContent{
+    padding-top: 50px;
+}
+
+.formSection{
+    padding-top: 50px;
+}
+
+.form-control {
+    /* display: block; */
+    width: 500px;
+    padding: .6rem .85rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    
+}
+
+.nameLabel{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.createNewBtn{
+    padding: 12px;
+    font-size: 22px;
+    width: 200px;
+}
+.buttonSection{
+    padding-top: 30px;
+}

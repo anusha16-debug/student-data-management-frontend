@@ -8,6 +8,10 @@ import { AddStudentdataComponent } from './add-studentdata/add-studentdata.compo
 import {ApiConfigurationService} from './api-configuration.service';
 import { HttpClientModule} from '@angular/common/http';
 import { CommonHeaderComponent } from './common-header/common-header.component';
+import {TableModule} from 'primeng/table';
+import {InputTextModule} from 'primeng/inputtext';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,8 +23,13 @@ import { CommonHeaderComponent } from './common-header/common-header.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule,
+    InputTextModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
+  // exports: [TableModule],
   providers: [ApiConfigurationService],
   bootstrap: [AppComponent]
 })

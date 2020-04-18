@@ -1,3 +1,77 @@
 <div class="mainContent">
     <app-common-header></app-common-header>
+
+
+    <div class="container">
+        <div class="sectionContent">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Add New Student Data</h2>
+            </div>
+        </div>
+    </div>
+        <div class="formSection">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="nameLabel">
+                        First Name :
+                        <input type="text" class="form-control" name="firstName" autocomplete="off" [(ngModel)]="firstName">
+                      </label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="nameLabel">
+                        Last Name :
+                        <input type="text" class="form-control" name="lastName" autocomplete="off" [(ngModel)]="lastName">
+                      </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="nameLabel">
+                        Contact Number :
+                        <input type="text" class="form-control" name="phoneNumber" (keypress)="numberOnly($event)" minlength="10" maxlength="10" autocomplete="off" [(ngModel)]="phoneNumber">
+                      </label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="nameLabel">
+                        Address :
+                        <input type="text" class="form-control" name="address" autocomplete="off" [(ngModel)]="address">
+                      </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="nameLabel">
+                        Class :
+                        <input type="text" class="form-control" name="class" autocomplete="off" [(ngModel)]="class">
+                      </label>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="nameLabel">
+                        Section :
+                        <input type="text" class="form-control" name="section" autocomplete="off" [(ngModel)]="section">
+                      </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label class="nameLabel">
+                        Grades :
+                        <input type="text" class="form-control" name="grades" autocomplete="off" [(ngModel)]="grades">
+                      </label>
+                </div>
+            </div>
+
+            <div class="row text-center buttonSection">
+                <div class="col-md-12 form-group">
+                    <button type="button" class="btn btn-primary createNewBtn" [disabled]="!firstName || !lastName || !phoneNumber || !address || !class || !section || !grades" (click)="addStudentData()">Submit</button>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
 </div>

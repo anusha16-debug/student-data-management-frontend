@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+.society .ui-table .ui-table-thead>tr>th {
+    padding: 20px 0px 20px 15px !important;
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    background: #3ab08b;
+    border: honeydew;
+}
+
+.society .ui-table .ui-sortable-column .ui-sortable-column-icon {
+    color: #FFFFFF;
+}
+
+.society .ui-table .ui-table-tbody > tr > td {
+    background-color: inherit;
+    border: 1px solid #FFFFFF;
+}
+
+.society .ui-table .ui-table-tbody>tr:nth-child(even) {
+    background-color: #f9f9f9 !important;
+}
+
+.society .ui-table .ui-table-tbody > tr > td {
+    background-color: inherit;
+    /* border: 1px solid #c8c8c8; */
+}
+
+.society th, .society td {
+    padding-top: 11px !important;
+    font-size: 13px;
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+    text-align: center;
+}
+
+.society .ui-table .ui-table-data>tr>td {
+    border-color: inherit;
+    box-sizing: border-box;
+    padding: .25em .5em;
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+.society .ui-widget-content {
+    border: 1px solid #D5D5D5;
+    background: #ffffff;
+    color: #222222;
+}
+
+.society .ui-table th.ui-state-default, .ui-table:hover th.ui-state-default:hover {
+    background: #3ab08b;
+}
+
+.society .ui-table .ui-sortable-column.ui-state-highlight {
+    background-color: #3ab08b !important;
+}
+
+.society tbody tr:hover {
+    transform: scale(1.0);
+  transition: all 0.3s ease-out 0s;
+  box-shadow:5px 0px 12px #3ab08b;
+}
+
+.listtable .table{
+    padding: 10px;
+}

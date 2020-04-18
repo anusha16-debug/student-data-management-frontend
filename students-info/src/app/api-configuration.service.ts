@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,11 @@ export class ApiConfigurationService {
 
    getAllStudents(){
       return this.http.get(this.URL_CONFIGURATION_MODULE.getStudents);
+  }
+
+  addStudentData(data): Observable<any>{
+    // console.log(data)
+    return this.http.post(this.URL_CONFIGURATION_MODULE.addStudent, data);
   }
 
   
