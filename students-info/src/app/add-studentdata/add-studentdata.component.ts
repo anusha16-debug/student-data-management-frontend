@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiConfigurationService } from '../api-configuration.service';
 import { Router } from '@angular/router';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-add-studentdata',
@@ -17,7 +18,7 @@ export class AddStudentdataComponent implements OnInit {
   section: string;
   grades: string;
 
-  constructor(private apiService: ApiConfigurationService,private router: Router) { }
+  constructor(private apiService: ApiConfigurationService,private router: Router, private messageService: MessageService) { }
 
   ngOnInit(): void {
   }
@@ -52,6 +53,8 @@ export class AddStudentdataComponent implements OnInit {
     }
     this.apiService.addStudentData(params).subscribe((res: any) => {
       if(res){
+        // this.messageService.add({severity:'success', summary:'Success Message', detail:'Data submitted successfully'});
+        
         setTimeout(() => {
           this.router.navigateByUrl('');
         }, 5000)

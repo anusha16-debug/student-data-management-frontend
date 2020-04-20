@@ -41,7 +41,7 @@
                                       <td>{{item.grades}}</td>
                                       <td>
                                           <button type="button" style="margin-right: 7px;" class="btn btn-warning">Update</button>
-                                          <button type="button" class="btn btn-danger">Delete</button>
+                                          <button type="button" class="btn btn-danger" (click)="deleteStudent(item._id)">Delete</button>
                                       </td>
                                   </tbody>
                             </table>

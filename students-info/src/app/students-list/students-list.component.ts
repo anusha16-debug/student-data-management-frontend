@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiConfigurationService} from '../api-configuration.service';
 import { Router } from '@angular/router';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-students-list',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class StudentsListComponent implements OnInit {
   studentsData: [];
+  showPopup = false;
 
   constructor(private apiService: ApiConfigurationService, private router: Router) { }
 
@@ -30,6 +32,19 @@ export class StudentsListComponent implements OnInit {
 
   navigate(){
     this.router.navigateByUrl('/create-student')
+  }
+
+  deleteStudent(val){
+    this.showPopup = true;
+    this.apiService.deleteStudentData(val).subscribe((res: any) => {
+      if(res){
+        window.location.reload();
+        this.getStudentsList();
+      }
+    },
+    (err)=>{
+      console.log(err)
+    });
   }
 
 }

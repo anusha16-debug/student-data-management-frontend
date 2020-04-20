@@ -12,6 +12,9 @@ import {TableModule} from 'primeng/table';
 import {InputTextModule} from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import {ToastModule} from 'primeng/toast';
+import {MessageService} from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,12 @@ import { FormsModule } from '@angular/forms';
     TableModule,
     InputTextModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ToastModule,
+    BrowserAnimationsModule
   ],
   // exports: [TableModule],
-  providers: [ApiConfigurationService],
+  providers: [ApiConfigurationService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

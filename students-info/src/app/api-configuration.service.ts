@@ -17,7 +17,9 @@ export class ApiConfigurationService {
     this.URL_CONFIGURATION_MODULE = {
 
       'getStudents': this.baseUrl + '/students',
-      'addStudent': this.baseUrl + '/student'
+      'addStudent': this.baseUrl + '/student',
+      'updateStudent': this.baseUrl + '/update/',
+      'deleteStudent': this.baseUrl + '/student'
     }
 
    }
@@ -29,6 +31,10 @@ export class ApiConfigurationService {
   addStudentData(data): Observable<any>{
     // console.log(data)
     return this.http.post(this.URL_CONFIGURATION_MODULE.addStudent, data);
+  }
+
+  deleteStudentData(studentId){
+    return this.http.delete(this.URL_CONFIGURATION_MODULE.deleteStudent + '/' + studentId);
   }
 
   
