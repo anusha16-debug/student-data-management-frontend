@@ -3,12 +3,11 @@
 
     <p-toast position="top-right"></p-toast>
 
-
     <div class="container">
-        <!-- <div class="sectionContent"> -->
+
         <div class="row sectionContent">
             <div class="col-md-8">
-                <h2>Add New Student Data</h2>
+                <h2>Update Student Data</h2>
             </div>
             <div class="col-md-4 infoBox">
                 <p class="gradesInfo">Grades Information</p>
@@ -20,7 +19,7 @@
                 </ul>
             </div>
         </div>
-    <!-- </div> -->
+
         <div class="formSection">
             <div class="row">
                 <div class="col-md-6 form-group">
@@ -55,13 +54,8 @@
 
             <div class="row">
                 <div class="col-md-6 form-group">
-                    <!-- <label class="nameLabel">
-                        Class :
-                        <input type="text" class="form-control" name="class" autocomplete="off" [(ngModel)]="class">
-                      </label> -->
-                
-                
-                    <label class="nameLabel">Class :</label>
+                        <!-- <input type="text" class="form-control" name="class" autocomplete="off" [(ngModel)]="class"> -->
+                        <label class="nameLabel">Class :</label>
                     <select class="form-control" id="sel1" [(ngModel)]="class">
                       <option value="1st">1st</option>
                       <option value="2nd">2nd</option>
@@ -74,8 +68,7 @@
                       <option value="9th">9th</option>
                       <option value="10th">10th</option>
                     </select>
-                    
-                  
+                      
                 </div>
                 <div class="col-md-6 form-group">
                     <label class="nameLabel">
@@ -87,7 +80,6 @@
                             <option value="C">C</option>
                             <option value="D">D </option>
                             </select>
-                      
                 </div>
             </div>
 
@@ -102,11 +94,12 @@
 
             <div class="row text-center buttonSection">
                 <div class="col-md-12 form-group">
-                    <button type="button" class="btn btn-primary createNewBtn" [disabled]="!firstName || !lastName || !phoneNumber || phoneNumber.length< 10 || !address || !class || !section || !grades" (click)="addStudentData()">Submit</button>
+                    <button type="button" class="btn btn-primary createNewBtn" (click)="updateStudentData()">Update</button>
                 </div>
             </div>
             
         </div>
+        </div>
+        </div>
+
     
-    </div>
-</div>

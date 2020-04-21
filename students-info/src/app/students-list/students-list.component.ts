@@ -11,6 +11,7 @@ import {MessageService} from 'primeng/api';
 export class StudentsListComponent implements OnInit {
   studentsData: [];
   showPopup = false;
+  studentId : string;
 
   constructor(private apiService: ApiConfigurationService, private router: Router) { }
 
@@ -34,11 +35,21 @@ export class StudentsListComponent implements OnInit {
     this.router.navigateByUrl('/create-student')
   }
 
-  deleteStudent(val){
+
+  confirmPopUp(val){
     this.showPopup = true;
-    this.apiService.deleteStudentData(val).subscribe((res: any) => {
+    this.studentId = val;
+  }
+
+  closePopUp(){
+    this.showPopup = false;
+  }
+
+  deleteStudent(){
+    this.apiService.deleteStudentData(this.studentId).subscribe((res: any) => {
       if(res){
         window.location.reload();
+        this.showPopup = false;
         this.getStudentsList();
       }
     },

@@ -18,8 +18,9 @@ export class ApiConfigurationService {
 
       'getStudents': this.baseUrl + '/students',
       'addStudent': this.baseUrl + '/student',
-      'updateStudent': this.baseUrl + '/update/',
-      'deleteStudent': this.baseUrl + '/student'
+      'updateStudent': this.baseUrl + '/update',
+      'deleteStudent': this.baseUrl + '/student',
+      'getStudentById': this.baseUrl + '/student'
     }
 
    }
@@ -35,6 +36,14 @@ export class ApiConfigurationService {
 
   deleteStudentData(studentId){
     return this.http.delete(this.URL_CONFIGURATION_MODULE.deleteStudent + '/' + studentId);
+  }
+
+  getStudentById(studentId){
+    return this.http.get(this.URL_CONFIGURATION_MODULE.getStudentById + '/' + studentId);
+  }
+
+  updateStudent(data, id){
+    return this.http.put(this.URL_CONFIGURATION_MODULE.updateStudent + '/' + id, data);
   }
 
   

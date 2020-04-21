@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/nova-light/theme.css';
+@import '~primeng/resources/primeng.min.css';
+
+
 .society .ui-table .ui-table-thead>tr>th {
     padding: 20px 0px 20px 15px !important;
-    color: #FFFFFF !important;
-    font-weight: 500 !important;
-    background: #3ab08b;
-    border: honeydew;
+    color: #000 !important;
+    font-weight: 600 !important;
+    /* background: #3ab08b; */
+    border: #000;
+    font-size: 17px;
 }
 
 .society .ui-table .ui-sortable-column .ui-sortable-column-icon {
@@ -22,7 +28,9 @@
 
 .society .ui-table .ui-table-tbody > tr > td {
     background-color: inherit;
-    /* border: 1px solid #c8c8c8; */
+    font-size: 14px;
+    padding: 2.571em 28.857em;
+    
 }
 
 .society th, .society td {
@@ -49,19 +57,20 @@
 }
 
 .society .ui-table th.ui-state-default, .ui-table:hover th.ui-state-default:hover {
-    background: #3ab08b;
+    /* background: #3ab08b; */
 }
 
 .society .ui-table .ui-sortable-column.ui-state-highlight {
     background-color: #3ab08b !important;
 }
 
-.society tbody tr:hover {
+/* .society tbody tr:hover {
     transform: scale(1.0);
   transition: all 0.3s ease-out 0s;
   box-shadow:5px 0px 12px #3ab08b;
-}
+} */
 
 .listtable .table{
     padding: 10px;
 }
+

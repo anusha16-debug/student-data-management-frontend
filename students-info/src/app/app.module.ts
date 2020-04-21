@@ -15,13 +15,15 @@ import { FormsModule } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
 import {MessageService} from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UpdateStudentComponent } from './update-student/update-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentsListComponent,
     AddStudentdataComponent,
-    CommonHeaderComponent
+    CommonHeaderComponent,
+    UpdateStudentComponent
   ],
   imports: [
     BrowserModule,

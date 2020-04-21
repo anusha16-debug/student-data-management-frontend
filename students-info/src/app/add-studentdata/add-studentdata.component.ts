@@ -53,7 +53,7 @@ export class AddStudentdataComponent implements OnInit {
     }
     this.apiService.addStudentData(params).subscribe((res: any) => {
       if(res){
-        // this.messageService.add({severity:'success', summary:'Success Message', detail:'Data submitted successfully'});
+        this.messageService.add({severity:'success', summary:'Success Message', detail:'Data submitted successfully'});
         
         setTimeout(() => {
           this.router.navigateByUrl('');
