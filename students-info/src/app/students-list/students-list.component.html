@@ -23,43 +23,11 @@
                 </div>
                 </div>
 
-                <!-- <div class="row tableContent">
-                    <div class="col-md-12 listtable">
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                      <th scope="col">First Name</th>
-                                      <th scope="col">Last Name</th>
-                                      <th scope="col">Contact No.</th>
-                                      <th scope="col">Address</th>
-                                      <th scope="col">Class</th>
-                                      <th scope="col">Section</th>
-                                      <th scope="col">Grades</th>
-                                      <th scope="col">Action</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody *ngFor="let item of studentsData; let i=index">
-                                      <td>{{item.first_name}}</td>
-                                      <td>{{item.last_name}}</td>
-                                      <td>{{item.phone}}</td>
-                                      <td>{{item.address}}</td>
-                                      <td>{{item.class}}</td>
-                                      <td>{{item.section}}</td>
-                                      <td>{{item.grades}}</td>
-                                      <td>
-                                          <button type="button" style="margin-right: 7px;" routerLink='update-student/id' [queryParams]="{id:item._id}"class="btn btn-warning">Update</button>
-                                          <button type="button" class="btn btn-danger" (click)="confirmPopUp(item._id)">Delete</button>
-                                      </td>
-                                  </tbody>
-                            </table>
-                          </div>
-                    </div>
-                </div> -->
+                
 
                 <div class="row tableContent">
                   <div class="col-md-12">
-                    <p-table [value]="studentsData" class="society" [paginator]="true" [rows]="5" [pageLinks]="1"
+                    <p-table [value]="studentsData" class="studentTable" [paginator]="true" [rows]="5" [pageLinks]="1"
                     [responsive]="true" #dt [globalFilterFields]="['first_name','last_name','class']"
                               sortMode="multiple" [responsive]="true">
                       <ng-template pTemplate="header">
