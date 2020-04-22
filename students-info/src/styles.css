@@ -28,9 +28,8 @@
 
 .society .ui-table .ui-table-tbody > tr > td {
     background-color: inherit;
-    font-size: 14px;
-    padding: 2.571em 28.857em;
-    
+    font-size: 16px;
+    padding: 40px;
 }
 
 .society th, .society td {
@@ -74,3 +73,15 @@
     padding: 10px;
 }
 
+.searchInputBox, .searchInputBox.active, .searchInputBox.focus{
+    width: 99%;
+    font-size: 16px;
+    /* border: none; */
+    margin-left: 5px;
+    padding: 9px;
+}
+
+
+select.form-control:not([size]):not([multiple]) {
+    height: auto !important;
+}

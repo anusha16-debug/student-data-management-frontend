@@ -15,6 +15,14 @@
                 </div>
 
 
+                <div class ="row tableContent">
+                  <div class="col-md-12">
+    
+                    <input type="text" class="searchInputBox xs-font-12 outline globalSearch" type="text" placeholder="Search"
+                      aria-label="Search" (input)="dt.filterGlobal($event.target.value, 'contains')">
+                </div>
+                </div>
+
                 <!-- <div class="row tableContent">
                     <div class="col-md-12 listtable">
                         <div class="table-responsive">
@@ -76,8 +84,16 @@
                             <td>{{item.section}}</td>
                             <td>{{item.grades}}</td>
                             <td>
-                                <button type="button" style="margin-right: 7px;" routerLink='update-student/id' [queryParams]="{id:item._id}"class="btn btn-warning">Update</button>
+                                <!-- <button type="button" style="margin-right: 7px;" routerLink='update-student/id' [queryParams]="{id:item._id}"class="btn btn-warning">Update</button>
                                 <button type="button" class="btn btn-danger" (click)="confirmPopUp(item._id)">Delete</button>
+                                <a routerLink='update-student/id' [queryParams]="{id:item._id}"></a> -->
+                                <a routerLink='update-student/id' [queryParams]="{id:item._id}">
+                                  <i class="fa fa-pencil right-buffer-25 table-icons" aria-hidden="true" style="margin-right: 14px;
+                                  font-size: 25px;
+                              "></i>
+                              </a>
+                              <a data-toggle="modal" (click)="confirmPopUp(item._id)">
+                                  <i class="fa fa-trash-o table-icons" aria-hidden="true" style="font-size: 25px;"></i></a>
                             </td>
                           </tr>
                       </ng-template>
