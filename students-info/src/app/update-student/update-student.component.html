@@ -86,9 +86,14 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label class="nameLabel">
-                        Grades :
-                        <input type="text" class="form-control" name="grades" autocomplete="off" [(ngModel)]="grades">
-                      </label>
+                        Grades : </label>
+                        <!-- <input type="text" class="form-control" name="grades" autocomplete="off" [(ngModel)]="grades"> -->
+                        <select class="form-control"  name="grades"  [(ngModel)]="grades">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            </select>
                 </div>
             </div>
 
